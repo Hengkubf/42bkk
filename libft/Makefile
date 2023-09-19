@@ -6,7 +6,7 @@
 #    By: pissrith <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 21:22:41 by pissrith          #+#    #+#              #
-#    Updated: 2023/09/05 23:36:52 by pissrith         ###   ########.fr        #
+#    Updated: 2023/09/19 19:42:01 by pissrith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,23 @@ ft_strchr.c\
 ft_strrchr.c\
 ft_memcmp.c\
 ft_strncmp.c\
-ft_strnstr.c
-
+ft_strnstr.c\
+ft_memset.c\
+ft_memmove.c\
+ft_strlcpy.c\
+ft_strlcat.c\
+ft_substr.c\
+ft_strdup.c\
+ft_strjoin.c\
+ft_itoa.c\
+ft_strtrim.c\
+ft_putchar_fd.c\
+ft_putstr_fd.c\
+ft_putendl_fd.c\
+ft_putnbr_fd.c\
+ft_strmapi.c\
+ft_striteri.c\
+ft_split.c
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
@@ -53,4 +68,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
