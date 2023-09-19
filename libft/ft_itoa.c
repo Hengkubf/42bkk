@@ -6,13 +6,13 @@
 /*   By: pissrith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 22:41:28 by pissrith          #+#    #+#             */
-/*   Updated: 2023/09/13 00:42:02 by pissrith         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:50:43 by pissrith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count(int a)
+static	size_t	count(int a)
 {
 	size_t	i;
 

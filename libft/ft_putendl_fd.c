@@ -6,7 +6,7 @@
 /*   By: pissrith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 00:56:27 by pissrith          #+#    #+#             */
-/*   Updated: 2023/09/13 01:04:15 by pissrith         ###   ########.fr       */
+/*   Updated: 2023/09/19 22:04:51 by pissrith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

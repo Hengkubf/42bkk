@@ -6,20 +6,20 @@
 /*   By: pissrith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 17:11:52 by pissrith          #+#    #+#             */
-/*   Updated: 2023/09/19 19:40:08 by pissrith         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:50:33 by pissrith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(const char *str, size_t i)
+static	int	ft_isspace(const char *str, size_t i)
 {
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	return (i);
 }
 
-int	parse_sign(const char *str, size_t *index)
+static	int	parse_sign(const char *str, size_t *index)
 {
 	int	sign;
 
@@ -35,7 +35,7 @@ int	parse_sign(const char *str, size_t *index)
 	return (sign);
 }
 
-int	isoverflow(long long n)
+static	int	isoverflow(long long n)
 {
 	if (n > 0)
 		return (-1);

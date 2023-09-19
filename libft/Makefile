@@ -6,7 +6,7 @@
 #    By: pissrith <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 21:22:41 by pissrith          #+#    #+#              #
-#    Updated: 2023/09/19 19:42:01 by pissrith         ###   ########.fr        #
+#    Updated: 2023/09/19 20:45:22 by pissrith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ ft_putnbr_fd.c\
 ft_strmapi.c\
 ft_striteri.c\
 ft_split.c
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f

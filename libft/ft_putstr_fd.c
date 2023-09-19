@@ -6,7 +6,7 @@
 /*   By: pissrith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 00:50:44 by pissrith          #+#    #+#             */
-/*   Updated: 2023/09/13 01:05:58 by pissrith         ###   ########.fr       */
+/*   Updated: 2023/09/19 22:05:02 by pissrith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (!s)
+		return ;
+	len = ft_strlen(s);
+	write(fd, s, len);
 }

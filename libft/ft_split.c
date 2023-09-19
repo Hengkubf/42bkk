@@ -6,13 +6,14 @@
 /*   By: pissrith <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 01:09:15 by pisitchaisr       #+#    #+#             */
-/*   Updated: 2023/09/18 13:01:09 by pissrith         ###   ########.fr       */
+/*   Updated: 2023/09/19 23:24:08 by pissrith         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	count_word(char const *s, char c)
+static	int	count_word(char const *s, char c)
 {
 	size_t	i;
 	size_t	countword;
@@ -29,7 +30,7 @@ int	count_word(char const *s, char c)
 	return (countword);
 }
 
-char	**ffree(char **sp)
+static	char	**ffree(char **sp)
 {
 	size_t	i;
 
@@ -43,7 +44,7 @@ char	**ffree(char **sp)
 	return (NULL);
 }
 
-char	**checkma(char **sp, size_t i, char const *s, char c)
+static	char	**checkma(char **sp, size_t i, char const *s, char c)
 {
 	size_t	j;
 	size_t	countword;
@@ -72,17 +73,16 @@ char	**checkma(char **sp, size_t i, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	countword;
-	size_t	i;
-	size_t	j;
 	char	**split;
+	size_t	size;
 
-	i = 0;
-	j = 0;
-	countword = 0;
-	split = ft_calloc((count_word(s, c) + 1), sizeof(char *));
+	if (!s)
+		return (NULL);
+	size = count_word(s, c);
+	split = malloc((size + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
+	split[size] = NULL;
 	split = checkma(split, 0, s, c);
 	return (split);
 }
