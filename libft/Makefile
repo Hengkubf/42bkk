@@ -6,7 +6,7 @@
 #    By: pissrith <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 21:22:41 by pissrith          #+#    #+#              #
-#    Updated: 2023/09/19 20:45:22 by pissrith         ###   ########.fr        #
+#    Updated: 2023/09/20 00:41:42 by pissrith         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,11 +46,17 @@ ft_putnbr_fd.c\
 ft_strmapi.c\
 ft_striteri.c\
 ft_split.c
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 OBJECTS = $(SOURCES:.c=.o)
+
+BONUS			=	ft_lstadd_front.c ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstlast.c\
+					ft_lstadd_back.c
+
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -68,4 +74,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all clean bonus fclean re
